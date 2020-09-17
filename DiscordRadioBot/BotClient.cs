@@ -137,10 +137,14 @@ namespace DiscordRadioBot
                 if(Playlist.Count > 0)
                 {
                     _currentTrackIndex = 0;
-                    await guildConnection.PlayAsync(Playlist.ElementAt(0)).ConfigureAwait(false);
                     IsSongPlaying = true;
+                    await guildConnection.PlayAsync(Playlist.ElementAt(_currentTrackIndex)).ConfigureAwait(false);
                 }
             }
+            else
+            {
+                await guildConnection.PlayAsync(Playlist.ElementAt(_currentTrackIndex)).ConfigureAwait(false);
+            }            
         }
         /// <summary>
         /// Adiciona novas músicas à playlist utilizando a API do YouTube para realizar a busca.
