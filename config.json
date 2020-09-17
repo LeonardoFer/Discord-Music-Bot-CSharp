@@ -1,0 +1,17 @@
+{
+  "token": "",
+  "prefix": "!",
+
+  "YoutubeApiKey": "",
+  "EndpointHostname": "127.0.0.1",
+  "EndpointPort": "2333",
+  "LavalinkPassword": "youshallnotpass",
+
+  "VirarMembroCanalId": "",
+  "ComandosBotCanalId": "",
+  "VirarMembroMensagemId": "",
+  "TagMembroId": "",
+  "ServerId": "",
+  "ReactionEmoji": ":headphones:",
+  "TrackMaxLengthInMinutes": "10"
+}
