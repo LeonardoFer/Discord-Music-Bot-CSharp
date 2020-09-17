@@ -1,5 +1,7 @@
 # Bot de Música para Discord:
- Usando o Bot:
+
+![Discord Bot](https://i.gyazo.com/ccaa70f3de5e2d039653f9759b6d3daf.png)
+
  ## Usando o bot:
  Para utilizar, abra o Lavalink e depois abra o app do Bot. Use o comando !entrar nome_canal e depois !tocar nome_musica. Você precisa estar em um canal de voz! Você precisa ter a Role com nome de "Server Admin" ou "Moderador" para dar comandos ao Bot! Em breve eu vou implementar uma forma de utilizar roles configuráveis no arquivo config.json.
  Bot de música para Discord utilizando [Lavalink](https://github.com/Frederikam/Lavalink), a [YouTube API](https://developers.google.com/youtube/v3), [DSharpPlus](https://github.com/DSharpPlus/DSharpPlus) e [C#](https://dotnet.microsoft.com). 
@@ -7,7 +9,6 @@
  -To use it first you have to open Lavalink and then the Bot app. Use the command !entrar channel_name and then !tocar song_name. You need to be in a voice channel! You have to add "Server Admin" or "Moderador" roles into your server to give commands to the Bot! Soon I will implement a way to use configurable roles in the config.json file.
   Music bot for Discord using [Lavalink](https://github.com/Frederikam/Lavalink), the [YouTube API](https://developers.google.com/youtube/v3), [DSharpPlus](https://github.com/DSharpPlus/DSharpPlus) and [C#](https://dotnet.microsoft.com).
 
-![Discord Bot](https://i.gyazo.com/ccaa70f3de5e2d039653f9759b6d3daf.png)
  ## Features:
   1. Implementei um recurso de pesquisa personalizado para procurar vídeos no YouTube usando a API oficial para que o Bot possa obter apenas vídeos marcados como MusicVideo (a pesquisa do Lavalink não funciona muito bem para pesquisa automatizada).
   2. O bot procura automaticamente, usando uma lista de palavras, você pode editar ambos os arquivos nas pastas de Recursos para canções/palavras personalizadas, basta manter 1 por linha, por novas músicas quando sua lista de reprodução terminar para que possa sempre continuar tocando algo.
