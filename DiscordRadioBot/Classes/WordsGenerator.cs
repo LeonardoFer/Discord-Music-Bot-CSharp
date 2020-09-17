@@ -67,19 +67,20 @@ namespace DiscordRadioBot.Classes
         /// <returns></returns>
         private List<string> GenerateWordList(int numberOfWords, Language language)
         {
+            string projectPath = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\"));
             string filePath;
             int fileNumberLines;
 
             switch(language)
             {
-                case Language.Portuguese:
-                    filePath = ConfigurationManager.AppSettings["PortugueseFile"];
+                case Language.Portuguese:                    
+                    filePath = $"{projectPath}{ConfigurationManager.AppSettings["PortugueseFile"]}";
                     fileNumberLines = File.ReadLines(filePath).Count();
                     WriteLine($"There is {fileNumberLines} lines in the Portuguese file.");
                     WriteLine($"Searching for Portuguese Words:\n");
                     break;
                 case Language.English:
-                    filePath = ConfigurationManager.AppSettings["EnglishFile"];
+                    filePath = $"{projectPath}{ConfigurationManager.AppSettings["EnglishFile"]}";
                     fileNumberLines = File.ReadLines(filePath).Count();
                     WriteLine($"There is {fileNumberLines} lines in the English file.");
                     WriteLine($"Searching for English Words:\n");

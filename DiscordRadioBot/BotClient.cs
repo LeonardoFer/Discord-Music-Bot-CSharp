@@ -3,6 +3,7 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Reflection;
 using System.Configuration;
 using System.Threading.Tasks;
 using System.Collections.Generic;
@@ -39,8 +40,10 @@ namespace DiscordRadioBot
         public async Task RunAsync()
         {
             #region Abrindo o arquivo de configuração do bot.
-            string json = string.Empty;
-            string configFilePath = ConfigurationManager.AppSettings["ClientConfigJson"];
+            string projectPath = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\"));
+            string configFilePath = $"{projectPath}{ConfigurationManager.AppSettings["ClientConfigJson"]}";
+ 
+            string json = string.Empty;            
 
             FileStream fileStream = null;
             try
