@@ -1,6 +1,8 @@
 # Bot de Música para Discord:
 
-![Discord Bot](https://i.gyazo.com/ccaa70f3de5e2d039653f9759b6d3daf.png)
+<p align="center">
+  <img width="389" height="296" src="https://i.gyazo.com/ccaa70f3de5e2d039653f9759b6d3daf.png">
+</p>
 
  ## Usando o bot(Portugues):
  Para utilizar, abra o Lavalink e depois abra o app do Bot. Use o comando !entrar nome_canal e depois !tocar nome_musica. Você precisa estar em um canal de voz! Você precisa ter a Role com nome de "Server Admin" ou "Moderador" para dar comandos ao Bot! Em breve eu vou implementar uma forma de utilizar roles configuráveis no arquivo config.json.
@@ -24,7 +26,9 @@
   4. Command to delete messages up to 50.
   5. Commands: !ping to ping the bot, !deletar_mensagens 50 to delete messages, !tocar song_name to play a song, !proxima to skip a song, !volume 0-100 to change the volume, !pause, !play to resume, !entrar channel_name to make it enter a voice room, !sair to leave the current voice room, !lista to list all songs in the playlist, !tocando to see the current song playing.
   
-  ![Virar Membro Gif](https://i.gyazo.com/bf0c93a556ce22804215688d05272fdc.gif)
+<p align="center">
+  <img width="500" height="222" src="https://i.gyazo.com/bf0c93a556ce22804215688d05272fdc.gif">
+</p>
   
 # Manual de Configuração | Configuration Manual:
  [Configuration Guide (English/Portuguese)](https://github.com/LeonardoFer/Discord-Music-Bot-CSharp/commit/0e6613bba36fec7e42851cb89f3edb3e1568579c)
