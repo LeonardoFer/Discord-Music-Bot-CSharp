@@ -2,7 +2,7 @@
 
 ![Discord Bot](https://i.gyazo.com/ccaa70f3de5e2d039653f9759b6d3daf.png)
 
- Para utilizar, abra o Lavalink e depois abra o app do Bot. Use o comando !entrar nome_canal e depois !tocar nome_musica. Você precisa estar em um canal de voz!
+ Para utilizar, abra o Lavalink e depois abra o app do Bot. Use o comando !entrar nome_canal e depois !tocar nome_musica. Você precisa estar em um canal de voz! Você precisa ter a Role com nome de "Server Admin" ou "Moderador" para dar comandos ao Bot! Em breve eu vou implementar uma forma de utilizar roles configuráveis no arquivo config.json.
 # Discord Music Bot:
  Bot de música para Discord utilizando [Lavalink](https://github.com/Frederikam/Lavalink), a [YouTube API](https://developers.google.com/youtube/v3), [DSharpPlus](https://github.com/DSharpPlus/DSharpPlus) e [C#](https://dotnet.microsoft.com). 
  Features:
@@ -12,7 +12,7 @@
   4. Comando para excluir mensagens de 0 até 50.
   5. Comandos: !ping para pingar o bot, !deletar_mensagens 50 para deletar mensagens, !tocar song_name para reproduzir uma música, !proxima para pular uma música, !volume 0-100 para alterar o volume, !pause, !play para retomar, !entrar channel_name para fazê-lo entrar em uma sala de voz, !sair para sair da sala de voz atual, !lista para listar todas as músicas na playlist, !tocando para ver a música que está tocando.
   
-  To use it first you have to open Lavalink and then the Bot app. Use the command !entrar channel_name and then !tocar song_name. You need to be in a voice channel!
+  To use it first you have to open Lavalink and then the Bot app. Use the command !entrar channel_name and then !tocar song_name. You need to be in a voice channel! You have to add "Server Admin" or "Moderador" roles into your server to give commands to the Bot! Soon I will implement a way to use configurable roles in the config.json file.
   Music bot for Discord using [Lavalink](https://github.com/Frederikam/Lavalink), the [YouTube API](https://developers.google.com/youtube/v3), [DSharpPlus](https://github.com/DSharpPlus/DSharpPlus) and [C#](https://dotnet.microsoft.com).
  Features:
   1. I've implemented a custom search feature to look for videos on YouTube using the official API so I can get only videos tagged as MusicVideo(the Lavalink search doesn't really work for automated search).
