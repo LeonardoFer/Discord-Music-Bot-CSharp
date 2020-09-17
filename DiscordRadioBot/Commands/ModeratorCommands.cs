@@ -12,6 +12,7 @@ using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
 
 using DiscordRadioBot.Classes;
+using Google.Apis.YouTube.v3.Data;
 #endregion
 namespace DiscordRadioBot.Commands
 {   
@@ -279,7 +280,7 @@ namespace DiscordRadioBot.Commands
                 StringBuilder stringBuilder = new StringBuilder();
                 for(int i = 0; i < BotClient.Playlist.Count; i++)
                 {
-                    stringBuilder.Append($"Música: {BotClient.Playlist[i].Title}. Posição: {i + 1}.\n");
+                    stringBuilder.Append($"Música: {i + 1} - {BotClient.Playlist[i].Title}.\n");
                 }
 
                 DiscordEmbedBuilder listEmbed = new DiscordEmbedBuilder
@@ -301,7 +302,7 @@ namespace DiscordRadioBot.Commands
         {
             if(BotClient.Playlist.Count > 0)
             {
-                await context.RespondAsync($"A música que eu estou tocando agora é: {BotClient.Playlist[BotClient._currentTrackIndex].Title}.").ConfigureAwait(false);
+                await context.RespondAsync($"A música que eu estou tocando agora é: {BotClient._currentTrackIndex + 1} - {BotClient.Playlist[BotClient._currentTrackIndex].Title}.").ConfigureAwait(false);
             }
             else
             {
