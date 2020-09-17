@@ -127,20 +127,20 @@ namespace DiscordRadioBot
         private static async Task Lavalink_PlaybackFinished(EventArgs TrackFinishEventArgs)
         {
             LavalinkGuildConnection guildConnection = LavalinkNode.GetGuildConnection(await Lavalink.Client.GetGuildAsync(configJson.ServerId).ConfigureAwait(false));
-            _currentTrackIndex++;
-            if(_currentTrackIndex > Playlist.Count)
-            {
-                await guildConnection.PlayAsync(Playlist[_currentTrackIndex]).ConfigureAwait(false);    
-            }
 
+            _currentTrackIndex++;
+            await guildConnection.Guild.GetChannel(configJson.ComandosBotCanalId).SendMessageAsync($"{_currentTrackIndex} | {Playlist.Count}");
             if(_currentTrackIndex + 1 > Playlist.Count)
             {
-                Playlist.Clear();
                 _currentTrackIndex = 0;
+                Playlist.Clear();
                 await guildConnection.Guild.GetChannel(configJson.ComandosBotCanalId).SendMessageAsync($"A playlist está vazia! Adicionando novas músicas!");
                 await AddSongs(5);
-                await guildConnection.PlayAsync(Playlist[_currentTrackIndex]).ConfigureAwait(false);
-                IsSongPlaying = true;
+                if(Playlist.Count > 0)
+                {
+                    await guildConnection.PlayAsync(Playlist[_currentTrackIndex - 1]).ConfigureAwait(false);
+                    IsSongPlaying = true;
+                }
             }
         }
         /// <summary>
