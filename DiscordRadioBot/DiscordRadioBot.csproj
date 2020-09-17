@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Resources\ConfigJson.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Struct\ConfigJson.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DSharpPlus" Version="4.0.0-nightly-00722" />
+    <PackageReference Include="DSharpPlus.CommandsNext" Version="4.0.0-nightly-00722" />
+    <PackageReference Include="DSharpPlus.Interactivity" Version="4.0.0-nightly-00722" />
+    <PackageReference Include="DSharpPlus.Lavalink" Version="4.0.0-nightly-00722" />
+    <PackageReference Include="DSharpPlus.VoiceNext" Version="4.0.0-nightly-00722" />
+    <PackageReference Include="Google.Apis.YouTube.v3" Version="1.47.0.2008" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
+  </ItemGroup>
+
+</Project>
